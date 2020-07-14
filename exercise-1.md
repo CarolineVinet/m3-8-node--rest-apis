@@ -17,3 +17,17 @@ Write out each endpoint, its method, and brief description of waht it should do.
 _This activity is more about the discussion in how to best organize data endpoints. There will not be any coding._
 
 ## Your Answer
+
+GET /stock - gets current inventory
+POST /stock - adds a new item
+PUT /stock/:item - updates inventory (adds or substracts quantity to an existing)
+
+GET /customers - gets total of customers who came in so far
+PUT /customers - updates total customers who visit the shop
+
+GET /seating - gets inventory of seats
+PUT /seating/:id - updates seat status (taken or available)
+
+GET /sales - display all sales
+POST /sales - adds a sale to the sales
+GET /sales/:id - get a specific sale from the sales
