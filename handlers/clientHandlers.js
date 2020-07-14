@@ -32,7 +32,7 @@ const deleteClient = (req, res) => {
   const indexOfClient = clients.findIndex((client) => {
     return client.id === clientId;
   });
-  clients.pop(indexOfClient);
+  clients.splice(indexOfClient, 1);
   res.status(200).send("Client has been deleted");
 };
 

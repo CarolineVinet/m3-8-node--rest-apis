@@ -10,6 +10,7 @@ const {
   addClient,
   deleteClient,
 } = require("./handlers/clientHandlers");
+const { getWordObj, letterGuess } = require("./handlers/hangmanHandlers");
 
 express()
   .use(function (req, res, next) {
@@ -31,5 +32,9 @@ express()
   .get("/clients/:id", getClientById)
   .post("/clients/:email", addClient)
   .delete("/clients/:id", deleteClient)
+
+  // .get("/hangman/word/:id") //only for testing, not for user in frontend
+  .get("/hangman/word", getWordObj)
+  .get("/hangman/guess/:id/:letter", letterGuess)
 
   .listen(8000, () => console.log(`Listening on port 8000`));
